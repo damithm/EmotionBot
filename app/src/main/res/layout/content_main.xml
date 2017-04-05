@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="mobile.jkcs.com.emotionbot.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your text here..."
+        android:id="@+id/labelText"
+        android:layout_alignParentTop="true"
+        />
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/labelText"
+        android:id="@+id/enterText"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="90px"
+        android:text="Check Text"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_below="@+id/enterText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:onClick="getEmotionValue"
+        android:id="@+id/btnVal"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnVal"
+        android:text="Mode:"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textMode"
+        android:textSize="25dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnVal"
+        android:text="Type"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/textMode"
+        android:textSize="25dp"
+        android:id="@+id/typeTxt"
+        />
+
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/AVLoadingIndicatorView"
+        android:visibility="invisible"
+        app:indicatorName="BallPulseIndicator"
+        app:indicatorColor="@android:color/holo_blue_dark"
+        android:layout_below="@+id/typeTxt"
+        android:layout_centerHorizontal="true"
+    />
+
+    </RelativeLayout>
